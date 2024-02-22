@@ -1,1 +1,64 @@
+### Churn Prediction Project using SVM 🔄
+
+1. **Import Libraries:**
+   - Import necessary libraries including NumPy, Pandas, Matplotlib, Seaborn, and scikit-learn SVM modules.
+
+2. **Data Gathering: 📊**
+   - Read the churn dataset using Pandas `read_csv` method.
+
+3. **Exploratory Data Analysis (EDA): 🔍**
+   - Check the shape of the dataset using `df.shape`.
+   - Inspect data types and missing values with `df.info()`.
+   - Identify and handle missing values using `df.isna().sum()`.
+
+4. **Feature Engineering: 🛠️**
+   - Use Label Encoding to convert categorical variables into numerical values.
+   - Replace values in 'International plan' and 'Voice mail plan' columns with 0 and 1.
+
+5. **Outlier Detection and Handling: 📊**
+   - Use IQR method to identify outliers in specific columns.
+   - Replace outliers with upper and lower bounds to handle them.
+
+6. **Standardization: 📏**
+   - Standardize the features using `StandardScaler` from scikit-learn.
+
+7. **Model Training - Logistic Regression: 🤖**
+   - Split the data into training and testing sets using `train_test_split`.
+   - Train a Logistic Regression model using `LogisticRegression` from scikit-learn.
+   - Evaluate the model on both training and testing data using accuracy, confusion matrix, and classification report.
+
+8. **Model Training - SVM: 🤖**
+   - Train an SVM model using `SVC` from scikit-learn with different kernel functions (linear, rbf, poly).
+   - Evaluate the SVM models on both training and testing data using accuracy, confusion matrix, and classification report.
+
+9. **Visualization of Data and Decision Boundaries: 📊**
+   - Create scatter plots to visualize the distribution of data points for both training and testing sets.
+   - Plot decision boundaries for the SVM models to visually understand the classification.
+
+10. **Conclusion and Accuracy Scores: 📈**
+    - Summarize the accuracy scores for different models and kernels used.
+
+11. **Additional Insights: 🧠**
+    - Potentially include additional insights or observations from the analysis.
+
+### SVM Decision Boundary Analysis 🤖📊
+
+- **Data & Model:**
+  - Features (`X`) and target variable (`y`) selected.
+  - SVM model built with RBF kernel, tuned with `gamma` and `C`.
+
+- **Visualization:**
+  - Decision boundary displayed using `DecisionBoundaryDisplay`.
+  - Scatter plot created for data distribution.
+
+- **Insights:**
+  - Decision boundary visually separates Churn and Non-Churn classes.
+  - Scatter plot enhances understanding of model performance.
+
+- **Conclusion:**
+  - Analysis aids in assessing SVM's classification effectiveness.
+  - Adjust hyperparameters based on observed decision boundary.
+
+- **Display:**
+  - Final analysis displayed with scatter plot and decision boundary. 📊👀
 
